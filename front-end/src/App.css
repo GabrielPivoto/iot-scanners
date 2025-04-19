@@ -1,0 +1,97 @@
+/* Estilos base */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Container principal */
+.app {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão */
+.fetch-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+.fetch-button:hover {
+  background: #2563eb;
+}
+
+.fetch-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Mensagem de erro */
+.error {
+  color: #ef4444;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #fee2e2;
+  border-radius: 6px;
+}
+
+/* Container dos dados */
+.data-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Cards de dados */
+.data-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.data-card h2 {
+  color: #64748b;
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.data-card p {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0.75rem 0 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .app {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: auto;
+  }
+  
+  .data-container {
+    grid-template-columns: 1fr;
+  }
+}
